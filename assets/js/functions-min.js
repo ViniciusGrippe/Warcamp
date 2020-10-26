@@ -1008,7 +1008,8 @@
 	}
 
 	function i(t, e, i) {
-		$(".main-content").children().removeClass("section--is-active"), $(".main-content").children().eq(e).addClass("section--is-active"), $(".main-content .section").children().removeClass("section--next section--prev"), t === i && 0 === e || 0 === t && e === i ? $(".main-content .section").children().removeClass("section--next section--prev") : e > t ? $(".main-content").children().eq(t).children().addClass("section--next") : $(".main-content").children().eq(t).children().addClass("section--prev"), 0 !== e && e !== i ? $(".header--cta").addClass("is-active") : $(".header--cta").removeClass("is-active")
+		$(".main-content").children().removeClass("section--is-active");
+		$(".main-content").children().eq(e).addClass("section--is-active"), $(".main-content .section").children().removeClass("section--next section--prev"), t === i && 0 === e || 0 === t && e === i ? $(".main-content .section").children().removeClass("section--next section--prev") : e > t ? $(".main-content").children().eq(t).children().addClass("section--next") : $(".main-content").children().eq(t).children().addClass("section--prev"), 0 !== e && e !== i ? $(".header--cta").addClass("is-active") : $(".header--cta").removeClass("is-active")
 	}
 
 	function n() {
@@ -1075,7 +1076,19 @@
 				o = $(this).parent().children().length - 1;
 			e(r), i(s, r, o)
 		}
-	}), $(".cta").click(function () {
+	}), $(".app-active").click(function () {
+		var t = $(".side-nav").find(".is-active"),
+			n = $(".side-nav").children().index(t),
+			s = $(".side-nav").children().length - 3,
+			r = s;
+		e(s), i(n, r, s)
+	}), $(".sobre-active").click(function () {
+		var t = $(".side-nav").find(".is-active"),
+			n = $(".side-nav").children().index(t),
+			s = $(".side-nav").children().length - 2,
+			r = s;
+		e(s), i(n, r, s)
+	}), $(".contato-active").click(function () {
 		var t = $(".side-nav").find(".is-active"),
 			n = $(".side-nav").children().index(t),
 			s = $(".side-nav").children().length - 1,

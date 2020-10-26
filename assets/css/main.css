@@ -247,13 +247,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
+
 .img--intro {
-  background-image: url(../img/app-visual-bg.png),
-    url(../img/introduction-visual.png);
+  background-image: url(../img/introduction-visual.png),
+    url(../img/app-visual-bg.png);
   background-size: 500px;
   background-repeat: no-repeat;
   width: 600px;
   height: 600px;
+  z-index: -1;
   background-position: center;
 }
 .img--sobre {
@@ -265,7 +267,7 @@ body {
   background-position: center;
 }
 .img--app {
-  background-image: url(../img/app-visual-bg.png), url(../img/app-visual.png);
+  background-image: url(../img/app-visual.png), url(../img/app-visual-bg.png);
   background-size: 500px;
   background-repeat: no-repeat;
   width: 600px;
@@ -617,18 +619,9 @@ body {
   content: "Aplicativo";
 }
 .side-nav li:nth-child(3)::before {
-  content: "Recursos";
-}
-.side-nav li:nth-child(4)::before {
-  content: "";
-}
-.side-nav li:nth-child(5)::before {
-  content: "";
-}
-.side-nav li:nth-child(6)::before {
   content: "Sobre Nós";
 }
-.side-nav li:nth-child(7)::before {
+.side-nav li:nth-child(4)::before {
   content: "Contato";
 }
 .side-nav li.is-active {
@@ -706,6 +699,7 @@ body {
 }
 .intro--banner p {
   padding-top: 10px;
+  max-width: 350px;
   padding-bottom: 40px;
 }
 .intro--banner button {
@@ -782,7 +776,7 @@ img.parceiros {
 }
 @media (max-width: 900px) {
   .intro--banner {
-    height: 380px;
+    height: 480px;
   }
   .intro--banner h1 {
     font-size: 55px;
@@ -1289,24 +1283,14 @@ img.parceiros {
     height: 305px;
   }
   .about--banner::before {
-    top: 0;
-    left: 125px;
+    display: none;
   }
   .about--banner::after {
-    top: 35px;
-    left: 260px;
+    display: none;
   }
   .about--banner h2 {
     margin-top: 10px;
     font-size: 44px;
-  }
-  .about--banner h2::before {
-    top: 28px;
-    left: 168px;
-  }
-  .about--banner h2::after {
-    top: 163px;
-    left: 163px;
   }
 
   .about--banner img {
@@ -1321,19 +1305,11 @@ img.parceiros {
     left: 155px;
   }
   .about--banner::after {
-    left: 310px;
+    /* left: 310px; */
   }
   .about--banner h2 {
     margin-top: 0;
     font-size: 55px;
-  }
-  .about--banner h2::before {
-    top: 43px;
-    left: 214px;
-  }
-  .about--banner h2::after {
-    top: 205px;
-    left: 205px;
   }
   .about--banner img {
     display: none;
@@ -1348,7 +1324,7 @@ img.parceiros {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/contact-visual.png");
+  /* background-image: url("../img/contact-visual.png"); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1408,14 +1384,14 @@ img.parceiros {
   list-style: none;
 }
 .contact--lockup .modal--options > li {
-  width: 130px;
+  width: 160px;
   margin: 0 auto 25px auto;
 }
 .contact--lockup .modal--options li:nth-child(1) {
-  background-color: #1769ff;
+  background-color: red;
 }
 .contact--lockup .modal--options li:nth-child(2) {
-  background-color: #ea4c89;
+  background-color: red;
 }
 .contact--lockup .modal--options li:nth-child(3) {
   margin-bottom: 0;
@@ -1428,6 +1404,16 @@ img.parceiros {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
+}
+.video-foreground,
+.video-background iframe {
+  position: fixed;
+  filter: blur(4px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 .hire {
   position: relative;
@@ -1796,4 +1782,70 @@ img.parceiros {
 .outer-nav li.is-vis:nth-child(5) {
   -webkit-transition-delay: 0.16s;
   transition-delay: 0.16s;
+}
+
+@media only screen and (max-width: 900px) {
+  .img--intro,
+  .img--app {
+    background-size: 330px;
+    width: 400px;
+    height: 400px;
+    bottom: 20px !important;
+    z-index: -1;
+  }
+  .intro--banner button {
+    z-index: 2;
+  }
+  .about--banner h2::before {
+    left: 210px;
+    top: 2px;
+  }
+  .about--banner h2::after {
+    left: 310px;
+    top: 40px;
+  }
+  .img--sobre {
+    background-size: 330px;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .intro--banner .img--intro,
+  .img--app {
+    background-size: 300px;
+    width: 400px;
+    height: 400px;
+    bottom: -150px;
+    right: -50px;
+    z-index: -1;
+  }
+  .intro--banner p {
+    max-width: 150px;
+  }
+  .img--app {
+    bottom: -270px !important;
+    z-index: -1;
+  }
+  .intro--banner button {
+    z-index: 2;
+  }
+  .about--banner h2::before {
+    left: 210px;
+    top: 2px;
+  }
+  .about--banner h2::after {
+    left: 310px;
+    top: 40px;
+  }
+  .img--sobre {
+    bottom: -380px !important;
+    right: -35px !important;
+    background-size: 330px;
+    width: 450px;
+    height: 450px;
+    z-index: -1;
+  }
 }
