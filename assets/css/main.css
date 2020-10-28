@@ -792,8 +792,17 @@ img.parceiros {
   }
 }
 @media (max-width: 767px) {
+  .about--options > a {
+    width: 170px !important;
+  }
+  .about--options > a::after {
+    display: none;
+  }
   .intro--banner {
-    height: 305px;
+    height: 450px;
+  }
+  .img--sobre {
+    right: -100px !important;
   }
   .intro--banner h1 {
     font-size: 44px;
@@ -1280,7 +1289,11 @@ img.parceiros {
 }
 @media (max-width: 767px) {
   .about--banner {
-    height: 305px;
+    height: 525px;
+  }
+  .about--banner p,
+  .about--banner ul {
+    max-width: 270px;
   }
   .about--banner::before {
     display: none;
@@ -1288,9 +1301,10 @@ img.parceiros {
   .about--banner::after {
     display: none;
   }
-  .about--banner h2 {
+  h2,
+  h1 {
     margin-top: 10px;
-    font-size: 44px;
+    font-size: 54px !important;
   }
 
   .about--banner img {
@@ -1307,9 +1321,10 @@ img.parceiros {
   .about--banner::after {
     /* left: 310px; */
   }
-  .about--banner h2 {
+  h2,
+  h1 {
     margin-top: 0;
-    font-size: 55px;
+    font-size: 45px !important;
   }
   .about--banner img {
     display: none;
@@ -1811,8 +1826,11 @@ img.parceiros {
     background-size: 330px;
     width: 400px;
     height: 400px;
-    bottom: 20px !important;
     z-index: -1;
+    bottom: -20px !important;
+  }
+  .img--app {
+    /* bottom: -150px !important; */
   }
   .intro--banner button {
     z-index: 2;
@@ -1834,32 +1852,37 @@ img.parceiros {
 }
 
 @media only screen and (max-width: 600px) {
-  .intro--banner .img--intro,
+  .img--intro {
+    background-size: 300px;
+    width: 400px;
+    height: 400px;
+    bottom: -160px !important;
+    right: -50px !important;
+    z-index: -1;
+  }
   .img--app {
     background-size: 300px;
     width: 400px;
     height: 400px;
-    bottom: -150px;
+    bottom: -270px !important;
     right: -50px;
     z-index: -1;
   }
   .intro--banner p {
     max-width: 150px;
   }
-  .img--app {
-    bottom: -270px !important;
-    z-index: -1;
-  }
   .intro--banner button {
     z-index: 2;
   }
   .about--banner h2::before {
-    left: 210px;
+    left: 172px;
     top: 2px;
+    height: 12px;
+    width: 12px;
   }
   .about--banner h2::after {
-    left: 310px;
-    top: 40px;
+    left: 250px;
+    top: 33px;
   }
   .img--sobre {
     bottom: -380px !important;
