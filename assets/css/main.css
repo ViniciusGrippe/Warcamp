@@ -1880,7 +1880,7 @@ img.parceiros {
   }
   .img--sobre {
     bottom: -400px !important;
-    /* right: 0px !important;  */
+    right: -80px !important; 
     z-index: -1;
   }
   .header--nav-toggle{
