@@ -67,6 +67,14 @@
     top: -95px;
   }
 }
+@media (max-width: 600px) {
+  .animation-logo h1.active:after, .animation-logo h1.active:before{
+    top: 20px;
+  }
+  .animation-logo h1{
+    top: -75px;
+  }
+}
 @keyframes glitch {
   0%, 20%, 33%, 60%, 64%, 66%, 69%, 73%, 75%, 90%, 93%, 100% {
     transform: skew(0deg);

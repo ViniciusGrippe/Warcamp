@@ -1,0 +1,26 @@
+@media (max-width: 414px){
+    .l-viewport{
+        height: auto;
+    }
+    .l-main-content, .l-section{
+        width: auto;
+        height: auto;
+        position: relative;
+        padding: 60px 0;
+    }
+    .about--banner p, .about--banner ul{
+        max-width: none;
+    }
+    .about{
+        padding:290px 0 0px 0;
+    }
+    .section{
+        visibility: visible;
+        opacity: 1;
+    }
+    .contact{
+        position: relative;
+        padding: 220px 0 0 0;
+        background-image: none;
+    }
+}

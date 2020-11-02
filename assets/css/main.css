@@ -1853,23 +1853,17 @@ img.parceiros {
 
 @media only screen and (max-width: 600px) {
   .img--intro {
-    background-size: 300px;
-    width: 400px;
-    height: 400px;
-    bottom: -160px !important;
-    right: -50px !important;
+    bottom: -420px !important;
     z-index: -1;
   }
   .img--app {
-    background-size: 300px;
-    width: 400px;
-    height: 400px;
-    bottom: -270px !important;
-    right: -50px;
+    
+    bottom: -380px !important;
+  right: -20px !important;
     z-index: -1;
   }
   .intro--banner p {
-    max-width: 150px;
+    /* max-width: 150px; */
   }
   .intro--banner button {
     z-index: 2;
@@ -1885,11 +1879,8 @@ img.parceiros {
     top: 33px;
   }
   .img--sobre {
-    bottom: -380px !important;
-    right: -35px !important;
-    background-size: 330px;
-    width: 450px;
-    height: 450px;
+    bottom: -400px !important;
+    /* right: 0px !important;  */
     z-index: -1;
   }
 }
